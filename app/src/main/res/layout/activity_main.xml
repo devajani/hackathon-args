@@ -5,22 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clickable="true"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/airport"
+    android:focusable="true">
 
 <Button
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:gravity="top"
     android:text="Scan Barcode"
     android:textSize="16sp"
+    android:textStyle="bold"
+    android:layout_gravity="center|top"
     android:id="@+id/scan_button"
     />
+
     <TextView
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Result"
+        android:text=""
+        android:textStyle="bold"
         android:textSize="22sp"
         android:gravity="center"
+        android:layout_gravity="center_vertical"
         android:layout_marginTop="20dp"
         android:id="@+id/scan_result" />
+
+    <Button
+        android:id="@+id/pay_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="30dp"
+        android:text="Pay"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="16sp" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>

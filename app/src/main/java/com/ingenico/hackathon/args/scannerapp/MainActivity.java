@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     public static TextView resulTextView;
     Button scanButton;
+    Button payButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,6 +20,14 @@ public class MainActivity extends AppCompatActivity {
 
         resulTextView = (TextView) findViewById(R.id.scan_result);
         scanButton = (Button) findViewById(R.id.scan_button);
+        payButton = (Button) findViewById(R.id.pay_button) ;
+
+        payButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), PayActivity.class));
+            }
+        });
 
         scanButton.setOnClickListener(new View.OnClickListener() {
             @Override
