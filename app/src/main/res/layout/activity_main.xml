@@ -16,7 +16,7 @@
     android:text="Scan Barcode"
     android:textSize="16sp"
     android:textStyle="bold"
-    android:layout_gravity="center|top"
+    android:layout_gravity="top"
     android:id="@+id/scan_button"
     />
 
@@ -25,10 +25,13 @@
         android:layout_height="wrap_content"
         android:text=""
         android:textStyle="bold"
-        android:textSize="22sp"
-        android:gravity="center"
-        android:layout_gravity="center_vertical"
+
+        android:gravity="left"
         android:layout_marginTop="20dp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeStepGranularity="2sp"
         android:id="@+id/scan_result" />
 
     <Button
