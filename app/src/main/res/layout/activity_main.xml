@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:clickable="true"
     tools:context=".MainActivity"
-    android:background="@drawable/airport"
+    android:background="@drawable/airport2_cropped"
+    android:scaleType="centerCrop"
     android:focusable="true">
 
     <Button
@@ -16,24 +17,27 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="72dp"
+        android:fontFamily="@font/roboto_medium"
         android:text="Scan Barcode"
         android:textSize="16sp"
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/scan_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textStyle="bold"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:gravity="left"
         android:layout_marginTop="200dp"
         android:autoSizeMaxTextSize="20sp"
         android:autoSizeMinTextSize="10sp"
-        android:autoSizeTextType="uniform"
         android:autoSizeStepGranularity="2sp"
-        android:id="@+id/scan_result" />
+        android:autoSizeTextType="uniform"
+        android:background="#8095AEC0"
+        android:gravity="left"
+        android:text=""
+        android:fontFamily="@font/roboto_medium"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/pay_button"
@@ -41,8 +45,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="414dp"
+        android:layout_marginTop="492dp"
         android:layout_marginBottom="30dp"
+        android:fontFamily="@font/roboto_medium"
         android:text="Pay"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="16sp"

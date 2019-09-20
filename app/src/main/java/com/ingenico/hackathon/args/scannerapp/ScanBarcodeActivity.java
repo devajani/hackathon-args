@@ -42,9 +42,18 @@ public class ScanBarcodeActivity extends AppCompatActivity implements ZXingScann
 
     @Override
     public void handleResult(Result result) {
-        priceMap.put("meal", 5.50F);
-        priceMap.put("snack", 2.50F);
-        priceMap.put("drink", 1.50F);
+//        priceMap.put("meal", 5.50F);
+//        priceMap.put("snack", 2.50F);
+//        priceMap.put("drink", 1.50F);
+        priceMap.put("coke", 2.00F);
+        priceMap.put("7up", 2.00F);
+        priceMap.put("fries", 2.00F);
+        priceMap.put("burger", 2.00F);
+        priceMap.put("chocolate", 2.00F);
+        priceMap.put("coffee", 2.00F);
+        priceMap.put("icecream", 2.00F);
+
+
 
 //        finalMap.put(result.getText(), priceMap.get(result.getText()));
 //        MainActivity.resulTextView.setText(finalMap.toString() + "Total :"+getTotal(finalMap));
@@ -55,9 +64,9 @@ public class ScanBarcodeActivity extends AppCompatActivity implements ZXingScann
         for ( String currentResult: finalList) {
             Float currentAmount = priceMap.get(currentResult);
             amount += currentAmount;
-            DisplayMessage += String.format("%s:\t%s\n", currentResult, currentAmount);
+            DisplayMessage += String.format("%s:\t\t%.2f\n", currentResult, currentAmount);
         }
-        DisplayMessage += "Total: " + amount;
+        DisplayMessage += String.format("Total:\t\t%.2f", amount);
         MainActivity.resulTextView.setText(DisplayMessage);
 
 
