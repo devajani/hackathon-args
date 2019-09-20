@@ -55,9 +55,9 @@ public class ScanBarcodeActivity extends AppCompatActivity implements ZXingScann
         for ( String currentResult: finalList) {
             Float currentAmount = priceMap.get(currentResult);
             amount += currentAmount;
-            DisplayMessage += String.format("%s:\t%s\n", currentResult, currentAmount);
+            DisplayMessage += String.format("%s:\t\t%.2f\n", currentResult, currentAmount);
         }
-        DisplayMessage += "Total: " + amount;
+        DisplayMessage += String.format("Total:\t\t%.2f", amount);
         MainActivity.resulTextView.setText(DisplayMessage);
 
 
